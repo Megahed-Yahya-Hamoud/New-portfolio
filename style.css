@@ -386,7 +386,7 @@ img {
   row-gap: 0.75rem;
 }
 
-.home__socail-link {
+.home__social-link {
   color: var(--title-color);
   font-size: 1.25rem;
   transition:
@@ -394,7 +394,7 @@ img {
     color 0.4s;
 }
 
-.home__socail-link:hover {
+.home__social-link:hover {
   color: var(--first-color);
   transform: translateX(0.25rem);
 }
@@ -1247,7 +1247,7 @@ img {
     row-gap: 1.5rem;
   }
 
-  .home__socail-link {
+  .home__social-link {
     font-size: 1.5rem;
   }
 
