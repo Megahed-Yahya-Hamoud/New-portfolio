@@ -1,3 +1,7 @@
+// =============== change color when refresh ============
+// const colors = ["255", "220", "300", "110", "180" ,"358" ];
+// const randomColor = colors[Math.floor(Math.random() * colors.length)];
+// document.documentElement.style.setProperty("--hue", randomColor);
 // =========== Home split text ================
 const { animate, splitText, stagger } = anime;
 
@@ -89,10 +93,100 @@ servicesButtons.forEach((button) => {
   });
 });
 
-// =============== Testimonials of duplicate cards ============
-
 // =============== copy email in contact ===============
+const copyBtn = document.getElementById("contact-btn"),
+  copyEmail = document.getElementById("contact-email").textContent;
+
+copyBtn.addEventListener("click", () => {
+  // use the clipboard API to copy text
+  navigator.clipboard.writeText(copyEmail).then(() => {
+    copyBtn.innerHTML =
+      'Email copied <i class="fa-regular fa-circle-check" style="font-size: 20px;"></i>';
+
+    // Restore the original text
+    setTimeout(() => {
+      copyBtn.innerHTML = 'Copy email <i class="fa-regular fa-copy"></i>';
+    }, 2000);
+  });
+});
 
 // =============== current year of the footer =========
+const textYear = document.getElementById("footer-year"),
+  currentYear = new Date().getFullYear();
+// each year it is updated to the current year
+textYear.textContent = currentYear;
 
 // =============== scroll sections active link ================
+const sections = document.querySelectorAll("section[id]");
+
+const scrollActive = () => {
+  // we get the position by scrolling down
+  const scrollY = window.scrollY;
+
+  sections.forEach((section) => {
+    const id = section.id, // id of each section
+      top = section.offsetTop - 50, // distance from the top edge
+      height = section.offsetHeight, // element height
+      link = document.querySelector(`.nav__menu a[href*="${id}"]`); // id nav link
+
+    if (!link) return;
+
+    link.classList.toggle(
+      "active-link",
+      scrollY > top && scrollY <= top + height,
+    );
+  });
+};
+
+window.addEventListener("scroll", scrollActive);
+
+// =============== custom cursor ================
+const cursor = document.querySelector(".cursor");
+let mouseX = 0,
+  mouseY = 0;
+const cursorMove = () => {
+  // position the cursor
+  cursor.style.left = `${mouseX}px`;
+  cursor.style.top = `${mouseY}px`;
+  cursor.style.transform = "translate(-50% , -50%)";
+
+  // update the cursor animation
+  requestAnimationFrame(cursorMove);
+};
+
+document.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+cursorMove();
+//  hide custom cursor on links
+
+const a = document.querySelectorAll("a");
+a.forEach((item) => {
+  item.addEventListener("mouseover", () => {
+    cursor.classList.add("hide-cursor");
+  });
+  item.addEventListener("mouseleave", () => {
+    cursor.classList.remove("hide-cursor");
+  });
+});
+
+// =============== scroll reveal animation ================
+
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "60px",
+  duration: 2000,
+  delay: 300,
+  // reset : true , //animations repeat
+});
+
+sr.reveal(
+  ".home__image , .projects__container, .work__container, .contact__container",
+);
+sr.reveal(".home__data", { delay: 900, origin: "bottom" });
+sr.reveal(".home__info", { delay: 1200, origin: "bottom" });
+sr.reveal(".home__social, .home__cv", { delay: 1500 });
+sr.reveal(".about__data", { origin: "left" });
+sr.reveal(".about__image", { origin: "right" });
+sr.reveal(".services__card", { interval: 100 });
