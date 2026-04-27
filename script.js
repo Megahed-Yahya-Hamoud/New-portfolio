@@ -27,11 +27,12 @@ animate(chars2, {
 // =========== swiper projects ===============
 
 const swiperProjects = new Swiper(".projects__swiper", {
-  loop: true,
   spaceBetween: 24,
-  slidesPerView: "auto",
+  slidesPerView: 3,
   grabCursor: true,
   speed: 600,
+  // loop: true,
+  
 
   pagination: {
     el: ".swiper-pagination",

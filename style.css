@@ -529,6 +529,14 @@ img {
 .projects__image {
   position: relative;
   z-index: 1;
+  background-position: center;
+}
+
+.projects__image {
+  height: 246.2px;
+  background-size: cover;
+  border-radius: 1.5rem;
+  width: inherit - 40px;
 }
 
 .projects__number {
@@ -550,6 +558,7 @@ img {
 .projects__title {
   font-size: var(--h2-font-size);
   margin-bottom: 1rem;
+  height: 49.2px;
 }
 
 .projects__subtitle {
@@ -560,6 +569,7 @@ img {
 .projects__description {
   font-size: var(--small-font-size);
   margin-bottom: 15px;
+  height: 33.6px;
 }
 
 .projects__img {
@@ -1023,6 +1033,14 @@ img {
     width: 350px !important;
   }
 
+  .projects__title {
+    height: 59.2.2px;
+  }
+
+  .projects__image {
+    height: 211px;
+  }
+
   /* ======== work  ========= */
   .work__tabs {
     width: 360px;
@@ -1089,6 +1107,10 @@ img {
     width: 320px !important;
   }
 
+  .projects__image {
+    height: 190px;
+  }
+
   /* ======== work  ========= */
   .work__title {
     font-size: 1.5rem;
@@ -1123,6 +1145,19 @@ img {
   /* ========= projects swiper  ========= */
   .projects__card {
     width: 290px !important;
+    display: grid;
+  }
+  .projects__title {
+    height: 55px !important;
+  }
+  .projects__image {
+    height: 169px;
+  }
+
+  .projects__description {
+    font-size: var(--small-font-size);
+    margin-bottom: 15px;
+    height: fit-content !important;
   }
 
   /* ======== work  ========= */
@@ -1331,6 +1366,10 @@ img {
 
   .projects__img {
     border-radius: 2rem;
+  }
+  .projects__image {
+    border-radius: 2rem;
+    height: 251.79px;
   }
 
   .projects__button {
