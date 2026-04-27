@@ -28,7 +28,7 @@ animate(chars2, {
 
 const swiperProjects = new Swiper(".projects__swiper", {
   spaceBetween: 24,
-  slidesPerView: 3,
+  slidesPerView: "auto",
   grabCursor: true,
   speed: 600,
   // loop: true,

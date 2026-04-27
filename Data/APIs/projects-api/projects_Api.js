@@ -41,7 +41,7 @@ const projects = [
         hint: "Web",
         technologies_used: ["HTML", "CSS", "Bootstrap", "JavaScript"],
         image: "Data/APIs/projects-api/images/music-player.png",
-        website_link: "https://megahed-yahya-hamoud.github.io/music-player/",
+        website_link: "https://megahed-yahya-hamoud.github.io/Music-Player-1/",
         video_link: "https://drive.google.com/file/d/1NUTfCjDHPj_kIIcKh3qs7OC4OrJrT7cy/view?usp=sharing"
     },
     {

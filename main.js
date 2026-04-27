@@ -23,7 +23,7 @@ projects.forEach((project) => {
 
                 <div class="projects__image" style="background-image:url('${project.image}');" >
                 
-                  <a href="${project.website_link}" target="_blank" class="projects__button">
+                  <a href="${project.video_link}" target="_blank" class="projects__button">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                   </a>
                 </div>
