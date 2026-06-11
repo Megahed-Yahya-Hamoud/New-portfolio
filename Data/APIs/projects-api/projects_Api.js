@@ -77,8 +77,8 @@ const projects = [
         hint: "Web",
         technologies_used: ["React.js", "JavaScript", "mantine framework", "CSS", "JSON-server"],
         image: "Data/APIs/projects-api/images/SportStore.png",
-        website_link: "",
-        video_link: "https://drive.google.com/file/d/15FLel4YG_y8JJjOL7zAMW4Tw6Qdkg5f0/view?usp=sharing"
+        website_link: "https://new-sport-store.vercel.app/",
+        video_link: "https://drive.google.com/file/d/15HqINueFu4Af6aYowSbhaBeBBnikshLu/view?usp=sharing"
     },
     {
         id: 10, 
