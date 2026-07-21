@@ -1,7 +1,7 @@
 // =============== change color when refresh ============
-// const colors = ["255", "220", "300", "110", "180" ,"358" ];
-// const randomColor = colors[Math.floor(Math.random() * colors.length)];
-// document.documentElement.style.setProperty("--hue", randomColor);
+const colors = ["255", "220", "300", "110", "180" ,"358" ];
+const randomColor = colors[Math.floor(Math.random() * colors.length)];
+document.documentElement.style.setProperty("--hue", randomColor);
 // =========== Home split text ================
 const { animate, splitText, stagger } = anime;
 
