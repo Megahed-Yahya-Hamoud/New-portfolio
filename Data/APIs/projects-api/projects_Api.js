@@ -91,6 +91,15 @@ const projects = [
     },
     {
         id: 11, 
+        name: "Rolex",
+        hint: "Web",
+        technologies_used: ["React", "Vite", "CSS Modules", "JavaScript" ],
+        image: "Data/APIs/projects-api/images/rolex.png",
+        website_link: "https://rolex-lemon.vercel.app",
+        video_link: ""
+    },
+    {
+        id: 12, 
         name: "Dashboard",
         hint: "Design",
         technologies_used: ["Figma"],
